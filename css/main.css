@@ -21,6 +21,7 @@ img {
 
 .nav-container {
   background: #404040;
+  max-height: 90px;
 }
 
 .nav-container a {
@@ -40,6 +41,16 @@ header {
 header .logo {
   color: #800000;
   font-weight: bold;
+  -webkit-text-stroke: 1px white;
+  font-size: 1em;
+  text-shadow: 0 0 2px red;
+}
+
+header img {
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  margin-top: -40px;
 }
 
 header ul {
@@ -51,6 +62,7 @@ header ul {
 header ul a {
   display: block;
   padding: 0 1em;
+  margin: -.15em;
 }
 
 .social-header, .hero-design {
@@ -58,7 +70,9 @@ header ul a {
 }
 
 .hero {
-  background: #4d4d4d;
+  /*background: #4d4d4d;*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#4d4d4d), color-stop(71%, #b0b0b0), to(white));
+  background: linear-gradient(180deg, #4d4d4d 0%, #b0b0b0 71%, white 100%);
   color: white;
   display: -ms-grid;
   display: grid;
@@ -97,18 +111,17 @@ section {
   position: relative;
 }
 
-.featured::before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #ffcccc;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
+/*.featured::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #ffcccc;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}*/
 .subtitle {
   text-transform: uppercase;
   font-weight: bold;
@@ -226,7 +239,7 @@ section {
 
 @media only screen and (min-width: 1050px) {
   .hero {
-    height: 90vh;
+    height: 95vh;
   }
   .nav-container {
     display: -ms-grid;
